@@ -1,0 +1,93 @@
+@use "./base/reset.scss";
+
+body {
+    background-color: lightgrey;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    h2 {
+        color: teal;
+        margin: 20px;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+    }
+    &_form {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        &_search {
+            width: 300px;
+            padding: 5px;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid grey;
+            &::placeholder {
+                color: grey;
+            }
+        }
+        &_btn {
+            color: whitesmoke;
+            background-color: grey;
+            padding: 5px;
+            font-weight: bold;
+            border: 1px solid grey;
+            cursor: pointer;
+            &:hover {
+                background-color: teal;
+            }
+        }
+    }
+    &_wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        > article:nth-child(even) {
+            background-color: grey;
+        }
+        > article:nth-child(odd) {
+            background-color: grey;
+        }
+        &_article {
+           flex: 1 1 28vw;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &_imgholder {
+                > img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    border-radius: 10%;
+                    border: 2px solid rgb(1, 59, 59);
+                }
+            }
+            &_text {
+                color: whitesmoke;
+                text-align: center;
+               
+                &_title {
+                    margin-top: 20px;
+                    font-size: 24px;
+                    font-weight: bold;
+                }
+                &_genre {
+                    margin-top: 10px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    &_footer {
+        background-color: black;
+    }
+}
+
+
